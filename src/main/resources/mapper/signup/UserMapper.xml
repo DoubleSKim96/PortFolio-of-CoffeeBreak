@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.coffeebreak.signup.repository.ISignUpMapper">
+
+	<resultMap id="UserMap" type="com.spring.coffeebreak.signup.model.SignUpVO">
+		
+		<id property="account" column="account"/>
+		<result property="password" column="password"/>
+		<result property="name" column="name"/>
+		<result property="phoneNum" column="phoneNum"/>
+		<result property="email" column="email"/>
+		<result property="sessionId" column="session_id" />
+		<result property="limitTime" column="limit_time" />
+	</resultMap>
+	
+	<!-- 회원가입 SQL -->
+	<insert id="register">
+		INSERT INTO user_info2
+			(account, name, password, phoneNum, email)
+		VALUES (#{account}, #{name}, #{password}, #{phoneNum}, #{email})	
+	</insert>
+	
+	<!-- 아이디 중복 체크 -->
+	<select id="checkId" resultType="int">
+		SELECT COUNT(*)
+		FROM user_info2
+		WHERE account=#{account}
+	</select>
+	
+	<!-- 이메일 중복 체크 -->
+	<select id="checkEmail" resultType="int">
+		SELECT COUNT(*)
+		FROM user_info2
+		WHERE email=#{email}
+	</select>
+	
+	<!-- 전화번호 중복 체크 -->
+	<select id="checkPhone" resultType="int">
+		SELECT COUNT(*)
+		FROM user_info2
+		WHERE phoneNum=#{phoneNum}
+	</select>
+	
+	<!-- 아이디 삭제 -->
+	<delete id="delete">
+		DELETE 
+		FROM user_info2
+		WHERE account=#{account}
+	</delete>
+	
+	<!-- 자동로그인을 했던 회원이 사이트 재방문 시 로컬에 지정된 쿠키값과 일치하는 회원의 정보를 조회하는 SQL -->
+	<select id="getUserWithSessionId" resultMap="UserMap">
+		SELECT *
+		FROM user_info2
+		WHERE session_id=#{sessionId}
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="memberLogin" resultMap="UserMap">
+		select account, password, name, phoneNum, email from user_info2 
+		where account = #{account}
+	</select>
+</mapper>

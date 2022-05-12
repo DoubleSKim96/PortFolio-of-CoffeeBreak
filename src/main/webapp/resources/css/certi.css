@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+.certi_all{
+	margin-top: 180px;
+}
+section, article{
+	http://localhost:8080/coffeebreak/#display: block;
+}
+
+[class^='sub_type']{
+	padding-bottom: 100px;
+}
+
+.cert_inner{
+	position: relative ;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.certi_title_wrap{
+	padding-bottom: 28px;
+	border-bottom: 2px solid #111;
+}
+
+.certi_title_wrap {
+	position: relative;
+	margin-top: 50px;
+}
+
+.certi_title{
+	font-size : 32px;
+	color: #111;
+	font-weight: 400;
+}
+h2{
+	line-height: 1em;
+}
+
+.depth-area {
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+.certi_title_wrap .depth-area ol{
+	font-size: 0;
+}
+
+ol {
+	list-style: none;
+}
+
+.certi_title_wrap .depth-area ol li {
+	display: inline-block;
+	font-size: 13px;
+	color: #888888;
+}
+
+.certi_title_wrap .depth-area ol li a,
+.certi_title_wrap .depth-area ol li strong{
+	font-size: inherit;
+	font-weight: inherit;
+	color: #888888;
+}
+
+a{
+	color:#333;
+	text-decoration: none;
+}
+
+strong{
+	font-weight: 700;
+}
+
+article {
+	display: block;
+}
+
+.join-area .step-list {
+	padding: 28px 0 32px;
+	border-bottom: 1px solid #ddd;
+}
+
+.step-list {
+	text-align: center;
+}
+
+div {
+	display: block;
+}
+
+.step-list li{
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 27px;
+	text-align: center;
+	font-size: 16px;
+	color: #888888;
+	font-weight: 500;
+}
+
+.join-step1 .info-text-wrap {
+	position: relative;
+}
+
+.info-text-wrap {
+	padding-top: 75px;
+	text-align: center;
+}
+
+.join-step1 .info-text-wrap .notice-text {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+.notice-text {
+	color: #ff752d;
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 24px;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+.info-text-wrap strong{
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 60px;
+	color: #111;
+}
+
+.info-text-wrap p{
+	margin-top : 20px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #111;
+}
+
+.btn-wrap {
+	margin-top: 45px;
+}
+
+.btn-type.v4 {
+    width: 220px;
+    font-weight: 400;
+    background: #222;
+    border-color: #222;
+}
+
+.btn-type {
+    width: 240px;
+    height: 62px;
+    background: #ff143c;
+    border: 1px solid #ff143c;
+    color: #fff;
+    font-size: 18px;
+    line-height: 62px;
+    font-weight: 500;
+}
+
+[class^='btn-type'] {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+[class^='btn-type'] {
+    position: relative;
+}

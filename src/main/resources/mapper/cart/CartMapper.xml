@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.coffeebreak.cart.repository.ICartMapper">
+	
+	<resultMap id="CartMap" type="com.spring.coffeebreak.cart.model.CartVO">
+		<id property="cartId" column="cart_id" />
+		<result property="account" column="account" />
+		<result property="menuId" column="menu_id" />
+		<result property="menuCount" column="menu_count" />
+		<result property="checkedSizePrice" column="checked_size_price" />
+		<result property="checkedSize" column="checked_size" />
+		<result property="menuCode" column="menu_code" />
+		<result property="menuName" column="menu_name" />
+		<result property="menuImage" column="menu_image" />
+		<result property="menuDescription" column="menu_description" />
+	</resultMap>
+	
+	<!-- 카트 추가 -->
+	<insert id="addCart">
+		insert into menu_cart(account, menu_id, checked_size_price, checked_size ,menu_count) 
+		values (#{account}, #{menuId}, #{checkedSizePrice}, #{checkedSize}, #{menuCount})
+	</insert>
+	
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+		delete from menu_cart where cart_id = #{cartId}
+	</delete>
+	
+	<!-- 카트 수량 수정 -->
+	<update id="modifyCount">
+		update menu_cart set menu_count = #{menuCount} where cart_id = #{cartId}
+	</update>
+	
+	<!-- 카트 목록 -->
+	<select id="getCart" resultMap="CartMap">
+		select a.cart_id, a.account, a.menu_id, a.checked_size_price, a.checked_size, a.menu_count, 
+		b.menu_code, b.menu_name, b.menu_image, b.menu_description 
+		from menu_cart a left outer join menu b on a.menu_id = b.menu_id 
+		where account = #{account};
+	</select>
+
+	<!-- 카트 확인 -->
+	<select id="checkCart" resultMap="CartMap">
+		select * from menu_cart 
+		where account = #{account} and menu_id = #{menuId}
+	</select>
+</mapper>

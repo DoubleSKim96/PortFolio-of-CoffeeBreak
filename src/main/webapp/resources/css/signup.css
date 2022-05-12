@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+.signup_all{
+	margin-top: 180px;
+}
+section, article{
+	http://localhost:8080/coffeebreak/#display: block;
+}
+
+[class^='sub_type']{
+	padding-bottom: 40px;
+}
+
+.signup_inner{
+	position: relative ;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.signUp_body{
+	position: relative ;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.signup_title_wrap{
+	padding-bottom: 28px;
+	border-bottom: 2px solid #111;
+}
+
+.signup_title_wrap {
+	position: relative;
+	margin-top: 50px;
+}
+
+.signup_title{
+	font-size : 32px;
+	color: #111;
+	font-weight: 400;
+}
+h2{
+	line-height: 1em;
+}
+
+.depth-area {
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+.signup_title_wrap .depth-area ol{
+	font-size: 0;
+}
+
+ol {
+	list-style: none;
+}
+
+.signup_title_wrap .depth-area ol li {
+	display: inline-block;
+	font-size: 13px;
+	color: #888888;
+}
+
+.signup_title_wrap .depth-area ol li a,
+.signup_title_wrap .depth-area ol li strong{
+	font-size: inherit;
+	font-weight: inherit;
+	color: #888888;
+}
+
+a{
+	color:#333;
+	text-decoration: none;
+}
+
+strong{
+	font-weight: 700;
+}
+
+article {
+	display: block;
+}
+
+.join-area .step-list {
+	padding: 28px 0 32px;
+	border-bottom: 1px solid #ddd;
+}
+
+.step-list {
+	text-align: center;
+}
+
+div {
+	display: block;
+}
+
+.step-list li{
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 27px;
+	text-align: center;
+	font-size: 16px;
+	color: #888888;
+	font-weight: 500;
+}
+
+.signup_div > label {
+	font-size: 20px;
+  	margin-right: 20px;
+  	margin-bottom: 10px;
+}
+
+.signup_div{
+  width: 600px;
+  padding-top: 10px;
+}
+
+.signup_div > .signup_in  {
+	width: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    height: 42px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #111;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+
+.signup_div2{
+	text-align: center;
+	margin-right: 600px;
+    margin-top: 50px;
+}
+
+.signup_div2 > button{
+    width: 100px;
+    height: 62px;
+    background: #ff143c;
+    border: 1px solid #ff143c;
+    color: #fff;
+    font-size: 18px;
+    line-height: 62px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#checkWrap {
+	width: auto;
+    margin-left: 180px;
+}
+
+#checkWrap2{
+	width: auto;
+    margin-left: 30px;
+}
+
+#checkWrap label {
+	display: block;
+	margin: 5px;
+	font-size: 14px;
+}
+
+#checkWrap label input[type="checkbox"]{
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+#checkWrap label:first-child input[type="checkbox"]{
+	width: 30px;
+	height: 30px;
+}
+

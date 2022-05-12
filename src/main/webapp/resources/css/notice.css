@@ -1,0 +1,483 @@
+@charset "UTF-8";
+
+.notice_all {
+	width: 1200px;
+	position: relative;
+	padding-top: 150px;
+	margin: auto;
+}
+
+.notice {
+	position: relative;
+	margin-top: 50px;
+}
+
+.page_title {
+	font-size: 32px;
+	color: #111;
+	font-weight: 400;
+}
+.page_title h2{
+	font-size: 100%;
+	font-weight: 500;
+	color: #000;
+	line-height: 1em;
+}
+
+.notice > .depth_area{
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+.notice > .depth_area > ol{
+	font-size: 0;
+	list-style: none;
+}
+
+.notice > .depth_area > ol li {
+	display: inline-block;
+	font-size: 13px;
+	color: #888888;
+}
+
+.notice > .depth_area ol li:before{
+	content: '';
+	margin: 3px 8px 2px 6px;
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-style: solid;
+	border-color: transparent #888888 #888888 transparent;
+	border-width:0 1px 1px 0;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.notice > .depth_area ol li:first-child:before{
+	display: none;
+}
+
+
+.notice_all > article {
+	display: block;
+}
+
+.menu_wrap{
+	position: relative;
+	margin-top: 28px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #111;
+}
+
+.menu_nav > ul{
+	font-size: 0;
+}
+.menu_nav > li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.menu_nav > ul li{
+	display: inline-block;
+}
+
+.menu_nav > ul li .active a{
+	font-weight: 600;
+	color: #111;
+}
+
+.menu_nav > ul li a {
+	font-size: 16px;
+	color: #888888;
+}
+
+.menu_wrap .menu_nav ul li:before{
+	display: inline-block;
+	content: '';
+	width: 1px;
+	height: 14px;
+	margin: 2px 20px 0;
+	background: #ddd;
+	vertical-align: top;
+}
+
+.menu_wrap .menu_nav ul li:first-child:before{
+	display: none;
+}
+/* ::before가 첫번째 li 앞에도 생기지 않도록 first-child를 이용하여 display: none으로 없애준다.*/
+
+.notice_area .form_group{
+	padding: 50px 20px 37px;
+}
+
+.form_group{
+	display: flex;
+	-webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+}
+/* form_group 영역의 display를 flex로 잘라준다.*/
+
+.form_group > .form_item{
+}
+.notice_area .form_group .form_item:first-child{
+	width: 164px;
+}
+/* form_item의 첫번째의 가로길이를 164px로 바꾼다. */
+
+.notice_area .form_group .form_item:first-child .select_type2{
+	width: 164px;
+	height: 48px;
+	line-height: 47px;
+}
+
+.select_type2 select{
+	height: 100%;
+	padding-left: 20px;
+	/* 왼쪽 여백 20px */
+	padding-right: 50px;
+	/* 오른쪽 여백 50px */
+	border: 1px solid #ddd;
+	color: #888888;
+	font-size: 15px;
+}
+/* select_type 안의 select 즉 웹페이지에서 제목 적혀있는 박스를 누르면 아래로 나오는 항목들 조정 */
+
+.select_type2 > select > option{
+	font-weight: normal;
+	display: block;
+	white-space: nowrap;
+	min-height: 1.2em;
+	padding: 0px 2px 1px;
+}
+
+.notice_area .form_group .form_item:first-child .select_type2:after{
+	content: '';
+	top: 357px;
+}
+
+.select_type2:after {
+	content: '';
+	z-index: 2;
+	left: 146px;
+	position: absolute;
+	display: table-column;
+	width: 13px;
+	height: 14px;
+	border-style: solid;
+	border-color: transparent #888 #888 transparent;
+	border-width: -1px 1px 1px 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+.notice_area .form_group .form_item input {
+	height: 48px;
+	line-height: 48px;
+}
+
+.form_item > input[type="text"]{
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    height: 42px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #111;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    font-family: "Roboto","Noto",sans-serif;
+}
+
+.form_item > input{
+	font-size: 1em;
+	vertical-align: middle;
+}
+
+
+.notice_area .form_group .form_item:last-child {
+	width: auto;
+	margin-left: 5px;
+	/* form_item의 마지막 */
+}
+
+
+.notice_area .form_group .form_item .btn_search {
+	width: 48px;
+	height: 48px;
+}
+
+
+.form_group .btn_search:before {
+	display: inline-block;
+	position: absolute;
+	top: 356px;
+	left: 52%;
+	margin: -13px 0 0 -13px;
+	content: '';
+	width: 52px;
+	height: 48px;
+	background: url("../images/icons/search.png");
+	background-position: center;
+	background-size: cover;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+.notice_area .table_type3 .side{
+color: #888888;
+text-align: right;
+font-size: 15px;
+margin-bottom: 10px;
+}
+
+.table_type3 > table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	table-layout: fixed;
+}
+
+.table_type3 > table > caption {
+	font-style: normal;
+	font-weight: 500;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.table_type3 > table > colgroup {
+	display: table-column-group;
+}
+
+.table_type3 > table > colgroup > col {
+	display: table-column;
+}
+
+
+.table_type3 > table > thead{
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.table_type3 > table > thead > tr{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+
+.table_type3  table  thead th{
+	border-bottom-color: #ddd;
+}
+
+.table_type3 thead th {
+	padding: 20px 0 18px;
+	background: 0;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1;
+	color: #111;
+	border-top: 2px solid #111;
+	border-bottom: 1px solid #111;
+}
+
+.table_type3 th{
+	border-left: 0;
+	border-right: 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+[class^='table-type'] th{
+	background: #f5f5f5;
+	vertical-align: middle;
+}
+
+[class^='table-type'] th{
+	padding: 10px 3px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.table_type3 > table > tbody{
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit; 
+}
+.notice_area .table_type3 tbody td:nth-child(2) p{
+	width: 350px;
+	font-weight: 600;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+.notice_area .table_type3 tbody td{
+	color: #111;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1;
+	padding: 20px 0;
+}
+
+.table_type3 tbody td{
+	padding: 25px 0;
+	color: #888888;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	border-bottom: 1px solid #ddd;
+}
+
+.table_type3 td{
+	border-left: 0;
+	border-right: 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+[class^='table-type'] td{
+	padding: 10px 3px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.table_type3 > table > tbody > tr > td {
+	word-wrap: break-word;
+	word-break: keep-all;
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.pagination > a {
+	color: #333;
+	text-decoration: none;
+}
+
+
+.pagination ol{
+	display: inline-block;
+	font-size: 0;
+	margin: 0 13px;
+	list-style: none;
+}
+
+.pagination ol li{
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 400;
+	margin-right: 20px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#count-per-page > .btn-page{
+	background-color: dimgrey;
+    color: white;
+    width: 40px;
+    height: 40px;
+    cursor:pointer;
+}
+
+.board_title > .board_content{
+	margin-left: 20px;
+	margin-bottom: 10px;
+	border: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #111;
+}
+
+.board_title{
+	margin-top: -226px;
+    margin-bottom: 14px;
+    paading : 25px 40px;
+}
+
+.board_text{
+	padding : 35px 40px;
+}
+
+textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    resize: none;
+    margin-top:10px;
+  }
+
+.list-button{
+    background-color: dimgrey;
+    color: white;
+    width: 240px;
+    height: 62px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2.5;
+    font-size: x-large;   
+    border:none;
+    cursor:pointer;
+}
+
+#formObj{
+	text-align: center;
+}
+    
+#write_title  {
+    display: block;
+    width: 100%;
+    height: 56px;
+    border: none;
+    font-size: 30px;
+    color: #202020;
+    font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,Malgun Gothic,dotum,sans-serif;
+    resize: none;
+    outline: 0 none;
+    line-height: 40px;
+    overflow: hidden;
+    letter-spacing: -.4px;
+}
+
+.board_text2{
+	margin: 0;
+    padding: 20px 20px 50px;
+    word-wrap: break-word;
+    color: #333;
+    font-size: 14px;
+    min-height: 370px;
+    font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
+}    
+
+label{
+	font-size: x-large;
+}

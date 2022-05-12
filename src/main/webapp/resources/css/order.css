@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+/*order폴더 공통요소 begin*/
+	*{
+	text-decoration:none;
+	list-style:none;
+	padding:0;
+	}
+
+	.wrap_all{
+	width:1200px;
+	position:relative;
+	padding-top:200px;
+	margin:auto;
+	}
+	
+	
+	
+	.wrap_title>section{
+	vertical-align:middle;
+	position:relative;
+	display:flex;
+	width:100%;
+	
+	}
+	
+	.select_way1{
+		flex:11; font-size:30px;
+		font-weight:lighter;
+		margin:0 0 10px 0;
+	}
+	
+	.select_way2{
+		flex:1; font-size:12px;
+		
+	width:105px;
+	height:32px;
+	line-height:32px;
+	font-size:14px;
+	color:#fff;
+	font-weight:400;
+	background:#222;
+	border-color:#222;
+	display:inline-block;
+	position:relative;
+	text-align:center;
+		
+	}
+	.select_way2 >button{
+		width:100px;
+		height:40px;
+		color: #fff;
+    	background-color: #888888;
+    	border-radius:10px;
+	}
+	
+	.order_way{
+	display:flex;
+	margin:auto;
+	padding-top:30px;
+	
+	}
+	
+	.order_way>div:first-child{
+	flex:1;
+	font-weight:700;
+	padding-left:15px;
+	
+	}
+	
+	.order_way>div:last-child{
+	flex:11;
+	font-weight:700;
+	padding-left:20px;
+	
+	}
+	
+	.order_way>div:not(:last-child){
+		border-right:2px solid #e3e3e3;
+	}
+	
+	.text_link_area{
+	border-top:3px solid black;
+	margin-top:10px;
+	position: relative;
+    padding: 27px 0 22px 108px ;
+    background: #f5f5f5;
+    font-size: 0;
+    line-height: 1;
+	}
+	
+	.text_link_area>span{
+	display: inline-block;
+    color: #238ece;
+    font-size: 16px;
+	}
+	
+	
+	
+	.coffee_cup{
+	width: 24px;
+    height: 24px;
+    background-image:url(../../static/images/delivery/coffee_cup.png);
+    display: inline-block;
+    vertical-align: middle;
+    background-position: -605px -40px;
+	}
+	
+	
+	
+	.address_list>ul{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+	}
+	
+	.address_list>ul>li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+    list-style:none;
+    position: relative;
+    padding: 32px 75px 30px 110px;
+	}
+	
+	.address_list>ul>li:after{
+	display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+	}
+	
+	.no_store{
+	display:block;
+	}
+	
+	.enter_address{
+	font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    line-height: 30px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+	}
+	
+	.add_link{
+	display: inline-block;
+    position: relative;
+    text-align: center;
+	width: 180px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #cccccc;
+    font-weight: 500;
+    color: #888888;
+    text-decoration: none;
+    left:40%;
+    
+	}
+	
+	
+	.wrap_for_paging{
+		display:flex;
+	}
+	
+	.wrap_for_paging>.pageNum_wrap{
+		flex:9;
+		display:flex;
+		align-items:center;
+	}
+
+	
+	.wrap_for_paging>.pageNum_wrap>.pageNum{
+		border:1px solid skyblue;
+		padding:10px 5px 10px 5px;
+		margin:20px 20px 20px 0px;
+		border-radius:5px;
+	}
+	
+	
+	.optional_ment{
+	padding: 0 75px;
+    margin-top: 20px;
+    text-align: right;
+    flex:3;
+    color: #ff752d;
+    font-size: 13px;
+    
+    line-height: 22px;
+	}
+	
+	.del_address_btn{
+	width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #cccccc;
+    color: #888888;
+    text-decoration: none;
+    position: absolute;
+    right:50px;
+	}
+	/*order폴더 공통요소 end*/
+	
+	/*delivery.jsp용*/
+	.delivery_up{
+	padding-right:500px;
+	}
+	
+	/*takeout.jsp용*/
+	.pick_up{
+	
+	padding-right:400px;
+	}
+	
+	
+	
+
+	
+	.store_map_area{
+	
+	height:1000px;
+	display:flex;
+	}
+	
+	.store_search_wrap{
+	width:450px;
+	border:1px solid black;
+	}
+	
+	.store_map{
+	position:relative;
+	width:750px;
+	}
+	
+	.select_tab>ul{
+	display:flex;
+	}
+	
+	.select_tab>ul>li{
+	flex:1;
+	height:55px;
+	text-align:center;
+	line-height:55px;
+	border:1px solid #e3e3e3;
+	}
+	
+	.searching_area{
+	
+	display:flex;
+	height:149px;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+	}
+	
+	.searching_area>input[type="text"]{
+	margin-left:20px;
+	width:60%;
+	height:50px;
+	}
+	
+	.market_condition{
+	padding-left:0px;
+	text-align:center;
+	margin-left:10px;
+	width:80px;
+	height:50px;
+	}
+
+	.search_img{
+	margin-left:10px;
+	width:42px;
+	height:42px;
+	background-size:cover;
+	background-position:center;
+	background-image:url('../images/icons/search.png');
+	background-repeat:no-repeat;
+	}
+	
+	.store_list>li{
+	padding: 20px 0 30px 32px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+	}
+	
+	.store_list>li>dl{
+	display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    padding-top: 10px;
+	}
+	
+	.store_list>li>dl>dt{
+	font-size: 16px;
+    color: #111;
+	}
+
+	.store_list>li>dl>dt>.tel{
+	margin-left:5px;
+	}
+	
+	.store_list>li>dl>dd{
+	padding-top:5px;
+	font-size:14px;
+	line-height:22px;
+	}
+	
+	.store_list>li>dl>dd>.address{
+	margin-top:8px;
+	color:#111;
+	}
+
+	.store_list>li>dl>dd>.hash{
+	margin-top:15px;
+	color:#888888;
+	}
+	
+	.store_list>li>dl>dd>.hash>span{
+	display:block;
+	}
+	
+	.store_list>li>.promotion_icon1{
+	display:inline-block;
+	vertical-align: top;
+    margin-left: 20px;
+    width:70px;
+    height:70px;
+    background-image:url(../images/icons/online_icon.PNG);
+    background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+	
+	.store_list>li>.promotion_icon2{
+	display:inline-block;
+	vertical-align: top;
+    margin-left: 10px;
+    width:70px;
+    height:70px;
+    background-image:url(../images/icons/offline_icon.PNG);
+    background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+	
+	.btn_wrap>a{
+	display: inline-block;
+    width: 80px;
+    height: 32px;
+    font-size: 14px;
+    margin-top:15px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    background-color: #888888;
+	}
+	
+	.btn_wrap>a:first-child{
+	margin-right:4px;
+	}
+	
+	.btn_wrap>a:last-child{
+    background-color: #111;
+	}
+	
+	
+	/*admin용*/
+	.modifyBtn{
+	width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #cccccc;
+    color: #888888;
+    text-decoration: none;
+    position: absolute;
+    right:160px;
+	}
+	
+	
+	
+	
+	

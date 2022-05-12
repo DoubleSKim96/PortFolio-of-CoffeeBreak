@@ -1,0 +1,501 @@
+/*--<<<<<< HEAD*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    letter-spacing: -0.75px;
+}
+body{
+    overflow-x: hidden;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+}
+
+::before, ::after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+article, header, footer, menu, nav, section{
+    display: block;
+}
+button{
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    appearance: none;
+    line-height: 1;
+    color: #000;
+}
+i{
+    font-style: italic;
+}
+.inner-box, #gnb .gnb-inner{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+    /* top-wrap */
+#wrap{
+    position: relative;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50; 
+    width: 100%;
+    height: 140px;
+    background: #fff;
+    border-bottom: 1px solid #e4e4e4;
+}
+#header .top-wrap{
+    position: relative;
+    height: 85px;
+    z-index: 3;
+    background: #fff;
+}
+
+#header .btn-logo{
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    z-index: 2;
+}
+.icon-logo{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    background-image: url("../images/logo/logo4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+}
+#header .visual-admin{
+    position: relative;
+    padding-top: 29px;
+    text-align: center;
+}
+#header .visual-admin > span{
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    border-bottom: 1px solid #222;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+#header .login{
+    position: absolute;
+    top: 20px;
+    right: -10px;
+}
+#header .login > a{
+    display: inline-block;
+    line-height: 39px;
+    padding: 10px;
+    vertical-align: middle;
+    color: #111;
+}
+
+    /* gnb-wrap */
+
+#gnb{
+    position: relative;
+    z-index: 2;
+}
+#gnb .gnb-inner{
+    position: relative;
+    z-index: 3;
+    background: #fff;
+}
+
+#gnb .gnb-inner > ul > li{
+    display: inline-block;
+    text-align: center;
+}
+#gnb .gnb-inner > ul > li > a{
+    display: block;
+    padding: 0 65px;
+    font-size: 18px;
+    line-height: 54px;
+    color: #111;
+}
+#gnb .gnb-inner > ul > li > a > span{
+    position: relative;
+}
+
+
+
+/* container */
+
+#container{
+    padding-top: 140px;
+}
+#container .main {
+    position: relative;
+}
+.main > article{
+    position: relative;
+    display: block;
+}
+
+    /* visual area */
+.main .visual-area .visual-slider{
+    height: 495px;
+    overflow: hidden;
+}
+
+.slide-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.slick-prev{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+    font-size: 0;
+    left: 85px;
+    background-image: url(../images/icons/arrow-left.png);
+    background-size: 65px;
+    z-index: 5;
+}
+.slick-next{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+    font-size: 0;
+    right: 85px;
+    background-image: url(../images/icons/arrow-right.png);
+    background-size: 65px;
+    z-index:5;
+}
+
+*/
+/* .slide-list .cafe{
+    display: block;
+    height: 495px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/event/cafe.jpg);
+    background-repeat: no-repeat;
+} */
+.visual-slider{
+    height: 495px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.slide-list{
+    display: flex;
+    transition: .5s ease-out;
+    height: 100%;
+    
+}
+.slide-list .inner{
+    padding: 0 16px;
+}
+.slide-list .inner .slide1{
+    display: block;
+    height: 495px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/event/cafe1.jpg);
+    background-repeat: no-repeat;
+}
+.slide-list .inner .slide2{
+    display: block;
+    height: 495px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/event/cafe2.jpg);
+    background-repeat: no-repeat;
+}
+.slide-list .inner .slide3{
+    display: block;
+    height: 495px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/event/cafe3.jpg);
+    background-repeat: no-repeat;
+}
+
+
+    /* delievery area */
+
+.main .delivery-area .item-wrap{
+    display: flex;
+    width: 100%;
+    height: 280px;
+    padding-top: 56px;
+}
+.main .delivery-area .item-wrap .item{
+    flex: 1;
+    padding-left: 70px;
+    text-align: left;
+}
+.icon-delievery{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/items/delievery.png);
+}
+.icon-takeout{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/items/takeout.png);
+}
+.icon-quick{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/items/quick.png);
+}
+.main .delivery-area .item-wrap .item > a{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 54px;
+}
+.main .delivery-area .item-wrap .item > a > span{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 42px;
+    color: red;
+    letter-spacing: -4px;
+}
+.main .delivery-area .item-wrap .item:nth-of-type(2) > a > span{
+    color: blue;
+}
+.main .delivery-area .item-wrap .item:nth-of-type(3) > a > span{
+    color: black;
+}
+.main .delivery-area .item-wrap .item > a .arrow{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+    background: red;
+    border-radius: 100%;
+    border: 0;
+}
+.main .delivery-area .item-wrap .item:nth-of-type(2) > a .arrow{
+    background: blue;
+}
+.main .delivery-area .item-wrap .item:nth-of-type(3) > a .arrow{
+    background: black;
+}
+.main .delivery-area .item-wrap .item > a .arrow:after{
+    content: ' ';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-color: transparent #fff #fff transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px;
+    left: -4px;
+    right: 0;
+    margin: 0 auto;
+}
+
+    /* product area */
+
+.main .product-area{
+    width: 100%;
+    height: 800px;
+    padding-top: 56px;
+}
+
+.main .product-area .section-row1 {
+	position: relative;
+	overflow: hidden;
+}
+.main .product-area .section-row1 > a {
+	display: block;
+	position: relative;
+	width: 100%;	
+}
+.main .product-area .section-row1 > a > img{
+	width: 100%;
+	max-width: 100%;
+	transform: scale(1, 1);
+	transition: .8s ease;
+}
+
+.main .product-area .section-row1 .inner-text  {
+	padding: 30px 0 40px 45px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+.main .product-area .inner-text {
+	width: 63%;
+	float: right;
+	left: inherit;
+	right: 0;
+	transform: none;
+	height: 100%;
+	position: absolute;
+}
+
+.main .product-area .grid-wrap .inner-text {
+	padding-left: 45px;
+	padding-top: 30px;
+	postion: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.main .product-area .inner-text > h1 {
+	font-size: 3.125rem;
+	text-transform: uppercase;
+	color: #6b4d30;
+	font-weight: 900;
+}
+
+.main .product-area .section-row2{
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.main .product-area .section-row2 .grid-wrap {
+	margin: 0 -5px;
+	
+}
+
+.main .product-area .section-row2 .grid-wrap .beverage {
+	width: calc(53% - 10px);
+	margin: 0 5px 10px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+
+.main .product-area .section-row2 .grid-wrap div > a> img {
+	width: 100;
+	max-width: 100%;
+	trasform: scale(1, 1);
+	transition: .8s ease;
+}
+
+.main .product-area .section-row2 .grid-wrap .dessert {
+	width: calc(47% -10px);
+	margin: 0 5px 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+    /* banner area */
+
+.main .banner-area{
+    display: relative;
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(88, 88, 88, 0.3)
+}
+.main .banner-area .banner{
+    display: relative;
+    padding: 0 70px;
+    width: 100%;
+    
+}
+.main .banner-area .banner{
+    display: flex;
+}
+.main .banner-area .banner > a{
+    flex: 1;
+}
+.main .banner-area .banner > a .icon-banner1{
+    display: block;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/banner/coffee.png);
+    background-size: 200px;
+}
+.main .banner-area .banner > a .icon-banner2{
+    display: block;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/banner/coffee-cup.png);
+    background-size: 200px;
+}
+.main .banner-area .banner > a .icon-banner3{
+    display: block;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/banner/beans.png);
+    background-size: 200px;
+}
+.main .banner-area .banner > a .icon-banner4{
+    display: block;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/banner/sandwich.png);
+    background-size: 200px;
+}

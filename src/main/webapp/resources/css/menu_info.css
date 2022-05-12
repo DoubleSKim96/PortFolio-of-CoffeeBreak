@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+[class^='title-wrap'] {
+	position: relative;
+}
+
+.title-wrap{
+	position: relative;
+	margin-top: 50px;
+}
+.title-wrap .title-menu{
+	font-size: 32px;
+	color: #111;
+	font-weight: 400;
+}
+.title-wrap .depth-area{
+	position: absolute;
+	right: 0px;
+	top: 16px;
+}
+.title-wrap .depth-area ol li {
+	display: inline-block;
+	font-size: 13px;
+	color: #888888;
+}
+
+.menu-list-area .menu-nav-wrap{
+	position: relative;
+	margin-top: 28px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #111;
+}
+
+.menu-nav-wrap .menu-nav ul li{
+	display: inline-block;
+}
+
+.menu-nav-wrap .menu-nav ul li.active a{
+	font-weight: 600;
+	color: #111;
+}
+.menu-nav-wrap .menu-nav ul li a{
+	font-size: 16px;
+	color: #888888;
+}
+.menu-nav-wrap .menu-nav ul li:before{
+	display: inline-block;
+	content: '';
+	width: 1px;
+	height: 14px;
+	margin: 2px 20px 0;
+	background: #ddd;
+	vertical-align: top;
+}
+.menu-nav-wrap .menu-nav ul li:first-child:before{
+	display: none;
+}
+
+/* 메뉴 화면 */
+.menu-detail-area {
+	position: relative;
+	padding-bottom: 130px;
+}
+.menu-detail-area .menu-info {
+	overflow: hidden;
+	padding: 50px 20px 0;
+}
+.menu-detail-area .menu-info .img-wrap {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	z-index: 5;
+	background: #fff;
+	width: 580px;
+	transition: top 0.3s ease-in-out;
+}
+.menu-detail-area .view-box	{
+	position: relative;
+	width: 580px;
+	height: 580px;
+	overflow: hidden;
+}
+
+img {
+	width: 580px;
+	height: 580px;
+}
+
+.menu-detail-area .menu-info .detail-wrap {
+	float: right;
+	width: calc(100% - 580px);
+	padding-left: 80px;
+}
+.menu-detail-area .menu-box {
+	margin-bottom: 40px;
+}
+.menu-detail-area .menu-box .title-box {
+	word-break: keep-all;
+}
+.menu-detail-area .menu-box .title-box .title {
+	margin-bottom: 9px;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 44px;
+	color: #111;
+}
+.menu-detail-area .menu-box .title-box .name-eng {
+	margin-bottom: 18px;
+}
+.menu-detail-area .menu-box .title-box .name-eng span {
+	display: block;
+	font-size: 15px;
+	color: #000000;
+	line-height: 24px;
+	
+}
+
+
+.menu-detail-area .menu-info-wrap {
+	position: relative;
+	border-top: 2px solid #000;
+}
+.menu-detail-area .menu-info-wrap .menu-info-wrap1 {
+	
+}
+.menu-detail-area .menu-info-box .menu-info-wrap .menu-info-wrap1 .menu-info-head {
+	height: 59px;
+	line-height: 59px;
+	position: relative;
+}
+.menu-detail-area .menu-info-box .menu-info-wrap .menu-info-wrap1 .menu-info-head p.title-info {
+	font-size: 18px;
+	color: #222;
+	padding-left: 10px;
+}
+.menu-detail-area .menu-info-box .menu-info-wrap .menu-info-wrap1 .menu-volume {
+	width: 375px;
+	position: absolute;
+	left: 320px;
+	top: 22px;
+	display: inline-block;
+}
+.menu-detail-area .menu-info-box .menu-info-wrap .menu-info-wrap1 .menu-volume > div {
+	float: left;
+	font-size: 16px;
+	color: #444;
+}
+
+.menu-detail-area .select-box .step-wrap {
+	position: relative;
+	border-top: 2px solid #000;
+}
+.menu-detail-area .select-box .step-wrap .title-wrap2 {
+	padding: 10px 0 15px;
+}
+
+.menu-detail-area .select-box .step-wrap .size-box {
+	font-size: 0;
+	padding-left: 10px;
+}
+.menu-detail-area .select-box .step-wrap .size-box .chk-box2 label {
+	font-size: 19px;
+	font-weight: 600;
+}
+.menu-detail-area .select-box .step-wrap:nth-of-type(n+2) {
+	margin-top: 50px
+}
+
+
+.menu-detail-area .menu-info-wrap .menu-info-wrap2 {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.menu-detail-area .menu-info-wrap ul {
+	width: 50%;
+	float: left;
+}
+.menu-detail-area .menu-info-wrap li {
+	margin-bottom: 15px;
+	padding: 0 10px;
+	line-height: 2.6;
+}
+.menu-detail-area .menu-info-wrap dl {
+	width: 100%;
+	font-size: 14px;
+	color: #444;
+}
+.menu-detail-area .menu-info-wrap dl dt {
+	float: left;
+	width: 85%;
+}
+.menu-detail-area .menu-info-wrap dl dd {
+	float: right;
+	width: 15%;
+	text-align: right;
+}
+
+.menu-detail-area .menu-info-wrap .menu-info-wrap3 {
+	width: 100%;
+	margin: 20px 0;
+}
+.menu-detail-area .menu-info-wrap .menu-note {
+	margin-top: 20px;
+}
+
+.menu-detail-area .step-order {
+	position: fixed;
+	botton: 0;
+	left: 0;
+	background: #f5f5f5;
+	width: 100%;
+	max-height: 100%;
+	z-index: 10;
+}
+
+.menu-detail-area .order-wrap {
+	position: relative;
+	font-size: 0;
+	height: 125px;
+}
+
+.menu-detail-area .order-wrap dl.coffee {
+	margin: 0;
+}
+.menu-detail-area .order-wrap dl {
+	display: inline-block;
+	width: 300px;
+	font-size: 0;
+	vertical-align: top;
+	padding: 25px 0;
+}
+.menu-detail-area .order-wrap dt {
+	padding: 0 0 5px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 23px;
+	color: #111;
+}
+.menu-detail-area .order-wrap dd {
+	overflow: hidden;
+	padding-right: 35px;
+	max-height: 50px;
+	transition: all 0.3s ease-in-out;
+}
+.menu-detail-area .order-wrap dd {
+	font-size: 13px;
+	line-height: 23px;
+	color: #111;
+	font-weight: 500;
+}
+.menu-detail-area .order-wrap dl.coffee dd p {
+	padding-left: 0;
+}
+.menu-detail-area .order-wrap dd p {
+	position: relative;
+	padding-left: 10px;
+}
+.menu-detail-area .order-wrap .modify-menu {
+	position: absolute;
+	top: 25px;
+	right: 340px;
+	font-size: 16px;
+	color: #111;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.menu-detail-area .order-wrap .add-menu {
+	position: absolute;
+	top: 25px;
+	right: 170px;
+	font-size: 16px;
+	color: #111;
+	text-align: center;
+	vertical-align: middle;
+}
+.menu-detail-area .order-wrap .add-menu .btn-wrap .btn-type,
+.menu-detail-area .order-wrap .modify-menu .btn-wrap .btn-type {
+	width: 158px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	background: #222;
+	color: #fff;
+	border: 1px solid #222;
+}
+.menu-detail-area .order-wrap .total-price {
+	position: absolute;
+	top: 23px;
+	right: 0;
+	font-size: 16px;
+	color: #111;
+	text-align: center;
+	vertical-align: middle;
+}
+.menu-detail-area .order-wrap .total-price strong {
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 24px;
+	font-weight: 600;
+}
+.menu-detail-area .order-wrap .total-price .btn-wrap {
+	margin-top: 8px;
+}
+.menu-detail-area .order-wrap .total-price .btn-wrap .btn-type {
+	width: 158px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+}

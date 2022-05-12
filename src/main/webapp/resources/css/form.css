@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.chk-box2 input[type="radio"] + .checkbox {
+	border-radius: 100%;
+}
+.chk-box2.selected .checkbox {
+	
+}
+.chk-box .checkbox {
+	display: none;
+	position: relative;
+	width: 22px;
+	height: 22px;
+	margin-right: 6px;
+	background: #fff;
+	border: 1px solid #cccccc;
+}
+.chk-box2 label {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	color: #888888;
+	font-weight: 500;
+}
+.chk-box2 input[type="checkbox"], .chk-box2 input[type="radio"] {
+	display: none;
+}
+input[type="radio"] {
+	appearance: none;
+}
+.chk-box2.selected {
+	background: #ff143c;
+	border: 1px solid #ff143c;
+}
+.chk-box2.selected label {
+	color: #fff;
+}
+.chk-box2 {
+	display: inline-block;
+	width: 150px;
+	height: 58px;
+	background: #fff;
+	border: 1px solid #cecece;
+	line-height: 58px;
+	border-radius: 20px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+.chk-box2:nth-of-type(n+2) {
+	margin-left: 10px;
+}
+.quantity-box {
+	position: relative;
+	font-size: 0;;
+}
+.quantity-box button {
+	position: absolute;
+	top: 0;
+	padding: 0 40px;
+	background: transparent;
+}
+.quantity-box input {
+	width: 100%;
+	padding: 0;
+	border: 1px solid #ddd;
+	border-radius: 30px;
+	text-align: center;
+	font-size: 24px;
+	color: #111;
+}
+.quantity-box input:read-only {
+	background: #fff;
+}
+.quantity-box button.btn-minus {
+	left: 0;
+}
+.quantity-box button.btn-plus {
+	right: 0;
+}
+.quantity-box button, .quantity-box input {
+	display: inline-block;
+	height: 56px;
+	line-height: 56px;
+	vertical-align: top;
+}
+.quantity-box button.btn-plus:before {
+	content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    width: 1px;
+    height: 16px;
+    background: #888888;
+}
+.quantity-box button.btn-minus:after, .quantity-box button.btn-plus:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -8px;
+	width: 16px;
+	height: 1px;
+	background: #888888;
+}
+.btn-wrap, btn-wrap2 {
+	width: 100%;
+}
+[class^='btn-wrap'] {
+	margin-top: 30px;
+	font-size: 0;
+	text-align: center;
+}
+[class^='btn-type'] {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+.btn-type {
+	width: 240px;
+	height: 62px;
+	background: #ff143c;
+	border: 1px solid #ff143c;
+	color: #fff;
+	font-size: 18px;
+	line-height: 62px;
+	font-weight: 500;
+}

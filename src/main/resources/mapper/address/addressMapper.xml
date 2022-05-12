@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.spring.coffeebreak.delivery.repository.IAddrMapper">
+    
+    <resultMap type="com.spring.coffeebreak.delivery.model.AddressVO" id="AddrMap">
+    	<id property="regNo" column="reg_no"/>
+    	<result property="postcode" column="postcode"/>
+    	<result property="roadAddress" column="road_address"/>
+    	<result property="jibunAddress" column="jibun_address"/>
+    	<result property="detailAddress" column="detail_address"/>
+    	<result property="extraAddress" column="extra_address"/>
+    	<result property="regDate" column="reg_date"/>    
+    	<result property="resultX" column="result_x"/>    
+    	<result property="resultY" column="result_y"/>    
+    	<result property="account" column="user_account"/>    
+    </resultMap>
+    
+    <select id="selectAllAddr" resultMap="AddrMap">
+    	SELECT * 
+    	FROM addr_one 
+    	WHERE user_account=#{account}
+    </select>
+    
+    <insert id="insert">
+    	INSERT INTO addr_one (postcode,road_address,jibun_address,detail_address,extra_address,result_x,result_y,user_account)
+    	VALUES(#{postcode},#{roadAddress},#{jibunAddress},#{detailAddress},#{extraAddress},#{resultX},#{resultY},#{account})
+    </insert>
+    
+    <select id="countAddr" resultType="int">
+    	SELECT COUNT(*)
+    	FROM addr_one
+    </select>
+    
+    <delete id="deleteAddr">
+    	DELETE 
+    	FROM addr_one
+    	WHERE reg_no=#{regNo}
+    </delete>
+    
+    <!-- mvd-config jdbc url 에 allowMultiQuery를 통해 가능! -->
+    <update id="liningNumber">
+		ALTER TABLE addr_one auto_increment=1;
+		SET @COUNT =0;
+		UPDATE addr_one 
+		SET reg_no=@COUNT:=@COUNT+1; 
+    </update>
+   
+    
+    </mapper>

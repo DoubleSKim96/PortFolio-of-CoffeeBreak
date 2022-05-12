@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.coffeebreak.menu.repository.IMenuMapper">
+	
+	<!-- DB컬럼명과 VO클래스의 필드명 매핑작업 -->
+	<resultMap id="MenuMap" type="com.spring.coffeebreak.menu.model.MenuVO">
+		<id property="menuId" column="menu_id" />
+		<result property="menuCode" column="menu_code" />
+		<result property="menuCateCode" column="menu_cateCode" />
+		<result property="menuCateName" column="menu_cateName" />
+		<result property="menuName" column="menu_name" />
+		<result property="menuNameEng" column="menu_nameEng" />
+		<result property="menuPrice_S" column="menu_price_S" />
+		<result property="menuPrice_M" column="menu_price_M" />
+		<result property="menuPrice_L" column="menu_price_L" />
+		<result property="menuImage" column="menu_image" />
+		<result property="menuVolume" column="menu_volume" />
+		<result property="menuDescription" column="menu_description" />
+		<result property="menuCal" column="menu_calorie" />
+		<result property="menuFat" column="menu_fat" />
+		<result property="menuPro" column="menu_protein" />
+		<result property="menuNatrium" column="menu_natrium" />
+		<result property="menuSugar" column="menu_sugar" />
+		<result property="menuCaffeine" column="menu_caffeine" />
+		<result property="menuNote" column="menu_note" />
+		
+	</resultMap>
+
+	<insert id="insertMenu">
+		INSERT INTO menu(menu_code, menu_cateCode, menu_cateName, menu_name, menu_nameEng, menu_price_S, menu_price_M, menu_price_L, menu_image, menu_volume, menu_description, menu_calorie, menu_fat, menu_protein, menu_natrium, menu_sugar, menu_caffeine, menu_note) 
+		VALUES(#{menuCode}, #{menuCateCode}, #{menuCateName}, #{menuName}, #{menuNameEng}, #{menuPrice_S}, #{menuPrice_M}, #{menuPrice_L}, #{menuImage}, #{menuVolume}, #{menuDescription}, #{menuCal}, #{menuFat}, #{menuPro}, #{menuNatrium}, ${menuSugar}, #{menuCaffeine}, #{menuNote})
+	</insert>
+
+	<select id="getMenuListAll" resultMap="MenuMap">
+		SELECT * FROM menu
+	</select>
+	
+	<select id="getMenuListOne" resultMap="MenuMap">
+		SELECT * FROM menu 
+		WHERE menu_cateCode = #{menuCateCode}
+	</select>
+	
+	<select id="getMenuOne" resultMap="MenuMap">
+		SELECT * FROM menu 
+		WHERE menu_code = #{menuCode}
+	</select>
+	
+	<update id="updateMenu">
+		UPDATE menu SET 
+		menu_code=#{menuCode}, 
+		menu_cateCode = #{menuCateCode}, 
+		menu_cateName = #{menuCateName}, 
+		menu_name = #{menuName}, 
+		menu_nameEng = #{menuNameEng}, 
+		menu_price_S = #{menuPrice_S}, 
+		menu_price_M = #{menuPrice_M}, 
+		menu_price_L = #{menuPrice_L}, 
+		menu_image = #{menuImage}, 
+		menu_volume = #{menuVolume}, 
+		menu_description = #{menuDescription}, 
+		menu_calorie = #{menuCal}, 
+		menu_fat = #{menuFat}, 
+		menu_protein = #{menuPro}, 
+		menu_natrium = #{menuNatrium}, 
+		menu_sugar = #{menuSugar}, 
+		menu_caffeine = #{menuCaffeine}, 
+		menu_note = #{menuNote} 
+		WHERE menu_code = #{menuCode}
+	</update>
+</mapper>

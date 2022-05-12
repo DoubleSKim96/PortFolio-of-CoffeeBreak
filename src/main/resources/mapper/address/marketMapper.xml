@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    
+     <mapper namespace="com.spring.coffeebreak.takeout.repository.IMarketMapper">
+     
+     	<resultMap type="com.spring.coffeebreak.takeout.model.MarketVO" id="MarketMap">
+    	<id property="marketRegNo" column="market_reg_no"/>
+    	<result property="marketTel1" column="market_tel1"/>
+    	<result property="marketTel2" column="market_tel2"/>
+    	<result property="marketTel3" column="market_tel3"/>
+    	<result property="marketPostcode" column="market_postcode"/>
+    	<result property="marketRoadAddress" column="market_road_address"/>
+    	<result property="marketJibunAddress" column="market_jibun_address"/>
+    	<result property="marketDetailAddress" column="market_detail_address"/>
+    	<result property="marketExtraAddress" column="market_extra_address"/>
+    	<result property="marketRegDate" column="market_reg_date"/>    
+    	<result property="marketResultX" column="market_result_x"/>    
+    	<result property="marketResultY" column="market_result_y"/>    
+    	<result property="marketDetailInfo" column="market_detail_info"/>    
+    	<result property="marketLocationInfo" column="market_location_info"/>    
+    	<result property="marketRunningTime" column="market_running_time"/>    
+    	</resultMap>
+
+    
+    	 <!-- 중복되는 동적 SQL 문에 대한 처리 -->
+    <sql id="search">
+    	<if test="condition=='marketRoadAddress'">
+    	WHERE market_road_address LIKE CONCAT('%',#{keyword},'%')
+    	</if>
+    	<if test="condition=='marketJibunAddress'">
+    	WHERE market_jibun_address LIKE CONCAT('%',#{keyword},'%')
+    	</if>
+    	<if test="condition=='marketDetailAddress'">
+    	WHERE market_detail_address LIKE CONCAT('%',#{keyword},'%')
+    	</if>
+  	 </sql>
+    	
+    	
+    	
+    	
+    	<select id="selectAllMar" resultMap="MarketMap">
+    	SELECT *
+    	FROM market_addr
+    	<include refid="search"/>
+    	LIMIT #{pageStart},#{countPerPage}
+    	</select>
+    
+    
+    	<!--매장주소 등록 -->
+    	<insert id="insertMar">
+    	INSERT 
+    	INTO market_addr(market_tel1,market_tel2,market_tel3,market_postcode,
+    					market_road_address,market_jibun_address,market_detail_address,
+						market_extra_address,market_result_x,market_result_y) 
+		VALUES(#{marketTel1},#{marketTel2},#{marketTel3},#{marketPostcode},#{marketRoadAddress},
+			  #{marketJibunAddress},#{marketDetailAddress},#{marketExtraAddress},#{marketResultX},#{marketResultY})
+    	</insert>
+    
+    
+    	<!-- 주소 갯수 -->
+    	<select id="countMar" resultType="int">
+    	SELECT COUNT(*)
+    	FROM market_addr
+    	<include refid="search"/>
+    	</select>
+    	
+    	
+    	<!-- 삭제 -->
+    	<delete id="deleteMar">
+    	DELETE
+    	FROM market_addr
+    	WHERE market_reg_no=#{marketRegNo}
+    	</delete>
+    	
+    	
+    	<!-- 자동 재정렬 -->
+    	<update id="alignMarNum">
+		ALTER TABLE market_addr auto_increment=1;
+		SET @COUNT =0;
+		UPDATE market_addr 
+		SET market_reg_no=@COUNT:=@COUNT+1; 
+       </update>
+    	
+    	<select id="selectOneMar" resultMap="MarketMap">
+    	SELECT *
+    	FROM market_addr
+    	WHERE market_reg_no=#{marketRegNo}
+    	</select>
+    	
+    	<update id="updateMar">
+    	UPDATE market_addr
+    	SET market_tel1=#{marketTel1}, market_tel2=#{marketTel2},
+    		market_tel3=#{marketTel3}, market_postcode=#{marketPostcode},
+    		market_road_address=#{marketRoadAddress}, market_jibun_address=#{marketJibunAddress},
+    		market_detail_address=#{marketDetailAddress}, market_extra_address=#{marketExtraAddress},
+    		market_result_x=#{marketResultX}, market_result_y=#{marketResultY},
+    		market_detail_info=#{marketDetailInfo}, market_running_time=#{marketRunningTime},
+    		market_location_info=#{marketLocationInfo}
+    	WHERE market_reg_no=#{marketRegNo}	
+    	</update>
+    	
+     </mapper>

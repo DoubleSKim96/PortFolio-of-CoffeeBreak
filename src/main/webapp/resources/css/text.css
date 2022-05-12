@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+[class^='title-wrap'] [class=^'title-type2'] {
+	font-size: 18px;
+	font-weight: 700;
+	color: #111;
+	line-height: 20px;
+}
+[class^='title-wrap'] [class=^'title-type'] {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28px;
+	color: #111;
+	font-weight: 400;
+}
+
+.title-type2 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #111;
+	line-height: 25px;
+}

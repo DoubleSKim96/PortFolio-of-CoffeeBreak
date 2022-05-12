@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+/* button css */
+.button-wrap{
+	width: 100%;
+}
+[class^='button-wrap']{
+	margin-top: 30px;
+	font-size: 0;
+	text-align: center;
+}
+.button-type{
+	width: 240px;
+	height: 62px;
+	background: #ff143c;
+	border: 1px solid #ff143c;
+	color: #fff;
+	font-size: 18px;
+	line-height: 62px;
+	font-weight: 500;
+}
+[class^='button-type']{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+.button-type2{
+	width: 100%;
+	height: 48px;
+	background: #fff;
+	border: 1px solid #cccccc;
+	font-size: 16px;
+	color: #888888;
+	line-height: 48px;
+	font-weight: 600;
+	border-radius: 25px;
+	transition: all 0.3s ease-in-out;
+}
+.button-type3{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	border: 1px solid #ff143c;
+	background: #ff143c;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 0;
+}
+
+/* text css */
+.sub-text{
+	font-size: 16px;
+	color: #555555;
+	line-height: 22px;
+}
+.title-type2{
+	font-size: 18px;
+	font-weight: 600;
+	color: #111;
+	line-height: 25px;
+}
+
+/* select css */
+.select-type{
+	position: relative;
+	width: 100%;
+	height: 42px;
+}
+.select-type select{
+	height: 100%;
+	padding-left: 20px;
+	padding-right: 50px;
+	border: 1px solid #ddd;
+	color: #888888;
+	font-size: 15px;
+}
+.select-type:after{
+	content: '';
+	z-index: 2;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-style: solid;
+	border-color: transparent #888 #888 transparent;
+	border-width: 0 1px 1px 0;
+	transform: rotate(45deg);
+	transition: all 0.15s ease-in-out;
+}
+
+/* form css */
+.form-group{
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+/* check box css */
+.check-box{
+	display: inline-block;
+	text-align: left;
+}
+.checkbox.v4 .checkbox{
+	background-color: #ddd;
+	border-color: #ddd;
+}
+
+/* main css */
+
+#container{
+	padding-top: 140px;
+}
+
+/* title-wrap */
+
+.title-wrap{
+	padding-bottom: 28px;
+	margin-top: 50px;
+	border-bottom: 2px solid #111;
+}
+.title-wrap .title-login{
+	font-size: 32px;
+	color: #111;
+	font-weight: 400;
+}
+.title-wrap .depth-area{
+	position: absolute;
+	right: 0px;
+	top: 16px;
+}
+.title-wrap .depth-area ol li {
+	display: inline-block;
+	font-size: 13px;
+	color: #888888;
+}
+
+
+
+
+/* 회원 로그인 */
+	/*  */
+.login-area{
+	width: 430px;
+	margin: 60px auto 0;
+}
+[class^='login-tab']{
+	text-align: center;
+}
+[class^='login-tab'] ul{
+	font-size: 0px;
+	margin-left: 1px;
+}
+[class^='login-tab'] li{
+	display: inline-block;
+	width: calc(50% + 1px);
+	margin: 0 0 0 -1px;
+}
+
+	/* active */
+.login-tab5 li.active a{
+	background: #fff;
+	z-index: 2;
+	color: #111;
+	font-weight: 600;
+}
+
+.login-tab5 li.active a:after{
+	border-color: #111;
+	border-bottom: none;
+}
+	/* non-active */
+.login-tab5 li a{
+	font-size: 16px;
+	background: #f5f5f5;
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: 60px;
+	color: #888888;
+	text-align: center;
+	line-height: 60px;
+	transition: all 0.3s ease-in-out;
+}
+.login-tab5 li a:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid #dddddd;
+	border-bottom: 1px solid #111;
+}
+
+	/* 회원 로그인, 비회원 주문 전환 css */
+.login-area .login-content{
+	padding-top: 50px;
+}
+.login-content.active{
+	display: block;
+} 
+[class^='login-content']{
+	display: none;
+}
+.login-area .form-item + .form-item{
+	margin-top: 10px;
+}
+
+	/* 아이디저장, 아이디찾기, 비밀번호찾기 */
+.login-area .check-item .check-box{
+	margin-top: 15px;
+}
+
+.check-box .checkbox{
+	display: inline-block;
+	position: relative;
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	margin-top: -2px;
+	background: #fff;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+#idcheck {
+	display: none;
+}
+input[id="idcheck"] + label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #ccc;
+	cursor: pointer;
+}
+input[id="idcheck"]:checked + label {
+	background-color: #666666;
+}
+
+.login-area .find-member{
+	float: right;
+	font-size: 0;
+	margin-top: 16px;
+}
+.login-area .find-member span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.login-area .find-member span a{
+	display: inline-block;
+	font-size: 14px;
+	color: #888888;
+	vertical-align: middle;
+}
+.login-area .find-member span:before{
+	display: inline-block;
+	content: '';
+	width: 1px;
+	height: 13px;
+	background: #ddd;
+	margin: 0 10px;
+	vertical-align: top;
+}
+.login-area .find-member span:first-child:before{
+	display: none;
+}
+
+	/* 버튼 : 로그인, 회원가입 */
+.login-area .button-wrap{
+	margin-top: 20px;
+}
+.login-area .button-wrap > [class^='button-type']{
+	height: 58px;
+	line-height: 58px; 
+	font-size: 16px;
+}
+.login-area .button-wrap .button-type.v1{
+	width: 100%;
+	background: #ff143c;
+	border: 1px solid #ff143c;
+	font-weight: 400;
+}
+.login-area .button-wrap .button-type.v2{
+	width: 100%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-weight: 500;
+	color: #000000;
+}
+
+	/* 버튼: sns */
+.login-area .sns-login{
+	margin-top: 40px;
+}
+.login-area .sns-login .sns-title{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: 600;
+	color: #111;
+}
+.login-area .sns-login .sns-button-list{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+.login-area .sns-login .sns-button-list .sns-button-item{
+	display: inline-flex;
+	width: 50px;
+	height: 50px;
+	height: 50px;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 53px
+}
+.login-area .sns-login .sns-button-list .sns-button-item + .sns-button-item{
+	margin-left: 26px;
+}
+.login-area .sns-login .sns-button-list li a{
+	width: 100%;
+	margin-top: -53px;
+	padding-top: 59px;
+}
+.login-area .sns-login .sns-button-list .sns-button-item.button-kakao{
+	background: url(../images/sns/btn-kakao.png) no-repeat;
+	background-size: contain;
+}
+.login-area .sns-login .sns-button-list .sns-button-item.button-naver{
+	background: url(../images/sns/btn-naver.png) no-repeat;
+	background-size: contain;
+}
+.login-area .sns-login .sns-button-list .sns-button-item.button-apple{
+	background: url(../images/sns/btn-apple.png) no-repeat;
+	background-size: contain;
+}
+
+/* 비회원 주문 */
+
+	/* sub-title */
+.login-area .login-content .sub-text{
+	color: #888888;
+}
+.login-area .login-content .sub-text a{
+	color: #111;
+	border-bottom: 1px solid #111;
+	margin-left: 8px;
+}
+
+	/* 비회원 주문 양식 영역 */
+.login-area .form{
+	margin-top: 30px;
+}
+
+	/* 이름, 전화번호 */
+.login-area .form .form-group{
+	margin-top: 10px;
+}
+.login-area .form .form-group .form-item.tel{
+	width: 303px;
+	margin-right: 6px;
+}
+.form-group .form-item:first-child{
+	margin-left: 0;
+}
+.form-group .form-item{
+	display: inline-flex;
+	width: 100%;
+	margin-left: 26px;
+}
+.login-area .form .form-group .form-item.tel .select-type{
+	margin-left: 0;
+}
+.login-area .form .form-group .form-item.tel input{
+	width: 97px;
+	margin-left: 6px;
+}
+.login-area .form .form-group .form-item.tel .select-type select{
+	font-size: 16px;
+	padding-right: 35px;
+}
+.button-type.v7{
+	width: 120px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	color: #ddd;
+	background: #222;
+	border-color: #222;
+}
+
+	/* 개인정보 동의 */
+.login-area .check-item .button-link{
+	font-size: 16px;
+	color: #111;
+	border-bottom: 1px solid #111;
+	vertical-align: middle;
+}
+.login-area .check-item .button-link.side2{
+	float: right;
+	margin-top: 13px;
+}
+.login-area .button-wrap{
+	margin-top: 20px;
+}
+.login-area .button-wrap > [class='button-type']{
+	height: 58px;
+	line-height: 58px;
+	font-size: 16px;
+}
+
+.login-area .title-type2{
+	margin: 50px 0 28px;
+}

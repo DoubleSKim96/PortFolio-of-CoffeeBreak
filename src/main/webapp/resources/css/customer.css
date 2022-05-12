@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+.customer_all{
+	width:1200px;
+	position: relative;
+	padding-top:200px;
+	margin:auto;
+	}
+.customer_title > div{display: block;}
+.customer_title > section{
+    vertical-align:middle;
+    left:300px;
+    display:flex;
+    width:100%;
+}
+
+.customer_title > .cus_1{
+	flex: 10;
+	font-size:40px;
+	font-weight: lighter;
+
+}
+.customer_title > .cus_2{
+	flex: 2;
+	font-size:15px;
+	font-weight:lighter;
+}
+
+.customer_title > .cus_3{
+	font-size:20px;
+}
+
+.customer_title > .cus_4{
+	font-size:20px;
+}
+
+.customer_title > .top{
+	position: relative;
+	padding: 50px 0 0px;
+	border-bottom: 1px  #ddd;
+}
+
+.select-type2 > p{
+	display: block;
+	margin-bloack-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.customer_search{
+	position:absolute;
+	top: 32%;
+	right: 0;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+.form-item{
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	margin-left: 7px;
+	display: inline-flex;
+}
+
+.select-type2 > select.selected{
+	color:#111;
+	font-weight: 500;
+	opacity: 1;
+}
+
+.select-type2 select{
+	height: 100%;
+	padding-left: 17px;
+	padding-right: 50px;
+	border: 1px solid #ddd;
+	font-size: 15px;
+}
+
+.select-type2 > select {
+    border: 1px solid #ddd;
+    padding: 0 0 0 20px;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    outline: none;
+    font-weight: 500;
+    font-family: "Roboto","Noto",sans-serif;
+    color: #888888;
+    width: 100%;
+    height: 42px;
+    font-size: 15px;
+}
+.select-type2 > select {
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    cursor: default;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
+}
+.select-type2 > select{
+	vertical-align: middle;
+}
+.form-item > input {
+	-webkit-writing-mode: horizontal-tb ! important;
+	vertical-align: middle;
+	font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-stretch: ;
+	text-rendering: auto;
+	word-spacing: normal;
+	line-height:normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+}
+
+.form-item > input[type="text"]{
+	width: 100%;
+	border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    height: 42px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #111;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    font-family: "Roboto", "Noto", sans-serif;
+}
+
+.form-item > .btn-search{
+
+   background-image: url("../images/icons/search.png");
+   background-position: center;
+   background-size: cover;
+   height: 40px;
+   width: 40px;
+   display: block;
+   background-repeat: no-repeat;
+}
+
+.top > .txt_faq {
+	font-size: 14px;
+    color: #ff143c;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.middle_list ul{
+	margin-left: 0px;
+}
+
+.middle_list > ol, ul{
+	list-style: none;
+}
+
+.customer_all > ul{
+	display: block;
+	list-style-type: disc;
+	margin-bloack-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+.middle_list{
+	display: block;
+	height: 52px;
+	background:#f5f5f5;
+	font-size: 15px;
+	border-right:2px solid #fff;
+	color: #888888;
+	text-align: left;
+	margin: 60px 0px;
+}
+
+middle_list li:nth-child(n+2){
+	margin-left: 0;
+}
+
+[class^='middle_list'] li:nth-child(n+2){
+	margin-left: -1px;
+}
+[class^='middle_list'] li a{
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 50px;
+    font-size: 15px;
+    color: #888888;
+    text-align: center;
+    line-height: 60px;
+    -webkit-transition: all 0.3s ease in out;
+    transition: all 0.3s ease-in-out;
+}
+
+.middle_list li{
+	overflow:hidden;
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	margin: 0;
+}
+
+[class^='middle_list'] li {
+    display: inline-block;
+    width: calc(23% + 1px);
+    text-align: center;
+    margin: 0 0 0 -1px;
+}
+.accordion{
+	padding-bottom: 100px;
+}
+input[id*="answer"] {
+	display: none;
+}
+input[id*="answer"] + label{
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid  black;
+	color: #111;
+	font-weight:900;
+	background:white;
+	cursor: pointer;
+	position: relative;
+}
+
+input[id*="answer"] + label em{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    margin-top: -16px;
+    display: inline-block;
+    background-image: url(../images/icons/customer_arrow.png);
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+input[id*="answer"] + label + div{
+	max-height: 0;
+	transition: all .35s;
+	overflow: hidden;
+	background: #e4e4e4;
+	font-size:11px;
+}
+
+input[id*="answer"] + label + div p{
+	display: inline-block;
+	padding: 20px;
+	font-size: 15px;
+}
+
+input[id*="answer"]:checked + label + div {
+	max-height: 100px;
+}
+
+input[id*="answer"]:checked + label em{
+	background-position:0 -40px;
+}
+
+.accordion {
+	padding-bottom: 100px;
+}
